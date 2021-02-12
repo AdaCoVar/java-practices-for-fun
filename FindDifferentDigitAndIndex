@@ -1,0 +1,49 @@
+import java.lang.reflect.Array;
+
+public class Main 
+{
+    // Make sure your class is public
+     
+    public static void main(String[] args)
+    {
+   
+      //this is the function
+        findUniq();
+    }
+    
+    private static void findUniq() //there is no need of a type nor a return cause you print it
+    {
+      double[] doubles = new double[]{1, 1, 1, 6, 1,1}; //array
+      double popular=0;
+      int different=0;
+      double numdiff=0;
+      if(doubles[0]==doubles[1])
+      {
+          popular=doubles[0];
+          for(int i=2;i<doubles.length;i++)
+          {
+              if(doubles[i]!=popular)
+              {
+                  different = i;
+                  numdiff=doubles[i];
+              }
+          }
+
+      }
+      else
+          if(doubles[2]==doubles[0])
+      {
+          different= 1;
+          numdiff= doubles[1];
+
+      }
+          else
+          {
+              numdiff=doubles[0];
+          }
+          System.out.println(different+1);
+          System.out.println(numdiff);
+      }
+
+    }
+
